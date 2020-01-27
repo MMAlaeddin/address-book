@@ -15,9 +15,30 @@ AddressBook.prototype.assignId = function(){
     return this.currentId;
 }
 
+// AddressBook.prototype.UpdateContact = function(firstName, lastName, phone){
+//     this.firstName = firstName;
+//     this.lastName = lastName;
+//     this.phone = phone; 
+// }
+
+AddressBook.prototype.updateContact = function(firstName, lastName, phone){
+    contact.firstName = this.UpdateContact();
+    this.contacts.push(contact);
+    contact.lastName = this.UpdateContact();
+    this.contacts.push(contact);
+    contact.phone = this.UpdateContact();
+    this.contacts.push(contact);
+}
+
 // business logic for Contacts
 
 function Contact(firstName, lastName, phone) {
+    this.firstName = firstName;
+    this.lastName = lastName;
+    this.phone = phone;
+}
+
+function UpdateContact(firstName, lastName, phone) {
     this.firstName = firstName;
     this.lastName = lastName;
     this.phone = phone;
@@ -43,8 +64,27 @@ AddressBook.prototype.deleteContact = function(id) {
             delete this.contacts[i];
             return true;
         }
-    }
+    } 
 }
+// AddressBook.prototype.updateContact = function(id){
+//     for (var i = 0; i < this.contacts.length; i++){
+//         if (this.contacts[i].id == id)
+//         delete this.contacts[i];
+//         return (updateContact)
+    
+
+Contact.prototype.UpdateContact = function(firstName, lastName, phone) {
+    this.firstName = firstName;
+    this.lastName = lastName;
+    this.phone = phone; 
+}
+// AddressBook.prototype.updateContact = function(firstName, lastName, phone){
+//     for (var i=0; i < this.contacts.length; i++) {
+//         if (this.contacts[i].firstName == firstName){
+//             this.contacts[i].firstName == 
+//         }
+//     }
+// } 
 
 //test.fullName();
 
